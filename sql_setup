@@ -1,0 +1,38 @@
+login as root
+CREATE USER  'student'@'localhost'   IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO   'student'@'%'   IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO   'student'@'localhost'   IDENTIFIED BY 'password';
+
+mysql -u student -p
+
+CREATE DATABASE Rate
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_czech_ci;
+
+USE Rate;
+
+drop table data;
+
+CREATE TABLE data (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  timestamp VARCHAR(25),
+  date VARCHAR(16),
+  last VARCHAR(16),
+  delta VARCHAR(4)
+);
+
+
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (13, 1594837586, "15 July 2020", 216317, 0.73);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (12, 1594739168, "14 July 2020", 214744, 0.24);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (11, 1594662520, "13 July 2020", 215266, 0.62);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (10, 1594550050, "12 July 2020", 216629, 0.07);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (9, 1594463650, "11 July 2020", 216474, 0.07);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (8, 1594380627, "10 July 2020", 216629, 0.05);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (7, 1594311999, "9 July 2020", 218410, -1.6);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (6, 1594225599, "8 July 2020", 220100, 9.9);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (5, 1594139199, "7 July 2020", 200123, -7.4);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (4, 1594052799, "6 July 2020", 216332, 5.4);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (3, 1593966399, "5 July 2020", 205245, 2.4);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (2, 1593879999, "4 July 2020", 200321, -5.2);
+INSERT INTO data (id, timestamp, date, last, delta) VALUES (1, 1593793599, "3 July 2020", 211328, 2.1);
+

@@ -17,6 +17,7 @@ public class Data {
     private String date;
 
     private Float last;
+
     @Column(name = "delta")
     private Float change;
 
@@ -93,7 +94,7 @@ public class Data {
 
     public String countNormalDate(Long timestamp) {
         Date dateConverted = new Date(timestamp * 1000);
-        SimpleDateFormat jdf = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat jdf = new SimpleDateFormat("dd MMMMM yyyy");
         return jdf.format(dateConverted);
     }
 

@@ -16,7 +16,7 @@ drop table data;
 CREATE TABLE data (
   id INT PRIMARY KEY AUTO_INCREMENT,
   timestamp VARCHAR(25),
-  date VARCHAR(16),
+  date VARCHAR(20),
   last VARCHAR(16),
   delta VARCHAR(4)
 );

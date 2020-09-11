@@ -15,13 +15,7 @@ import java.io.IOException;
 @Service
 public class ApiCall {
 
-    //@Autowired
     private final OkHttpClient client = new OkHttpClient();
-
-    //tady nemusí být Autowired, protože je to konstruktor:
-    //public ApiCall(OkHttpClient client) {
-    //    this.client = client;
-    //}
 
     public Data doGetRequest(String url) throws IOException {
         Request request = new Request.Builder().url(url).build();
@@ -30,14 +24,12 @@ public class ApiCall {
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        //objectMapper.disable(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT);
 
         da.project.sporteezone.app.entity.Response rawResponse = objectMapper.readValue(stringResponse, da.project.sporteezone.app.entity.Response.class);
-        System.out.println(rawResponse);
 
         Data rateToSave = rawResponse.getData();
         rateToSave.setDate(rateToSave.countNormalDate(rateToSave.getTimestamp()));
-        System.out.println(rateToSave);
+
         return rateToSave;
 
     }

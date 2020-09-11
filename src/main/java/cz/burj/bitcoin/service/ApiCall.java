@@ -1,9 +1,8 @@
-package da.project.sporteezone.app.service;
+package cz.burj.bitcoin.service;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import da.project.sporteezone.app.entity.Data;
-import org.springframework.beans.factory.annotation.Autowired;
+import cz.burj.bitcoin.entity.Data;
 import org.springframework.stereotype.Service;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -25,7 +24,7 @@ public class ApiCall {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
-        da.project.sporteezone.app.entity.Response rawResponse = objectMapper.readValue(stringResponse, da.project.sporteezone.app.entity.Response.class);
+        cz.burj.bitcoin.entity.Response rawResponse = objectMapper.readValue(stringResponse, cz.burj.bitcoin.entity.Response.class);
 
         Data rateToSave = rawResponse.getData();
         rateToSave.setDate(rateToSave.countNormalDate(rateToSave.getTimestamp()));
@@ -38,7 +37,7 @@ public class ApiCall {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
-        da.project.sporteezone.app.entity.Response rawResponse = objectMapper.readValue(resp, da.project.sporteezone.app.entity.Response.class);
+        cz.burj.bitcoin.entity.Response rawResponse = objectMapper.readValue(resp, cz.burj.bitcoin.entity.Response.class);
         System.out.println(rawResponse);
 
         Data rateToSave = rawResponse.getData();

@@ -1,8 +1,8 @@
-package da.project.sporteezone.app.controller;
+package cz.burj.bitcoin.controller;
 
-import da.project.sporteezone.app.entity.Data;
-import da.project.sporteezone.app.repository.RateRepository;
-import da.project.sporteezone.app.service.ApiCall;
+import cz.burj.bitcoin.entity.Data;
+import cz.burj.bitcoin.repository.RateRepository;
+import cz.burj.bitcoin.service.ApiCall;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package da.project.sporteezone.app;
+package cz.burj.bitcoin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,11 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.context.ServletWebServerInitializedEvent;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.EventListener;
-import org.springframework.core.env.Environment;
-import org.springframework.web.servlet.RequestToViewNameTranslator;
-import org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator;
 
 import java.util.Objects;
 

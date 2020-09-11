@@ -1,4 +1,4 @@
-package da.project.sporteezone.app.entity;
+package cz.burj.bitcoin.entity;
 
 import javax.persistence.*;
 import java.text.SimpleDateFormat;

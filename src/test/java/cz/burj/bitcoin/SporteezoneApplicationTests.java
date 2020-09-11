@@ -1,4 +1,4 @@
-package da.project.sporteezone.app;
+package cz.burj.bitcoin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,7 @@
-package da.project.sporteezone.app.repository;
+package cz.burj.bitcoin.repository;
 
 
-import da.project.sporteezone.app.entity.Data;
+import cz.burj.bitcoin.entity.Data;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
